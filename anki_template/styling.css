@@ -1,0 +1,231 @@
+/* ======================================================== */
+/* === IMPORTACIONES DE FUENTES (DEBEN IR PRIMERO) === */
+/* ======================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+/* ======= Reset & Globals ======= */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+/* === Estilos base (Modo Claro) === */
+body {
+  margin: 0 !important; padding: 0 !important; min-height: 100%; height: auto;
+  overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  background-color: #fcfcfc; color: #1f1f1f;
+  font-family: "Roboto", "Helvetica Neue", "Lato", sans-serif;
+  font-size: 20px; font-weight: 400;
+}
+.card {
+  text-align: left; margin: 0; display: flex; flex-direction: column;
+  min-height: 100vh; background-color: #fcfcfc;
+}
+
+/* === Estilos Modo Oscuro === */
+body.nightMode { background-color: #131313; color: #ddd; }
+body.nightMode .card { background-color: #131415 !important; }
+
+#myCard {
+  display: flex; flex-direction: column; align-items: center;
+  margin: 0 auto; padding: 0 1em 1em 1em; width: 100%; max-width: 900px;
+  position: relative; text-align: center;
+}
+
+b, strong, .study-word { color: #FFA313; }
+#myCard > div:first-child { flex: initial; max-height: 100%; overflow: visible; }
+
+/* === ESTILOS DE VIDEO Y AMBIENT MODE (Sin cambios) === */
+.video-wrapper { max-width: 560px; width: 90%; aspect-ratio: 16 / 9; margin: 15px auto; position: relative; }
+.video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: visible; }
+.video-container video, #ambient-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-container video { z-index: 2; object-fit: cover; background-color: #000; overflow: hidden; opacity: 0; transition: opacity 0.1s ease-in-out; }
+.video-container video.video-ready { opacity: 1; }
+@keyframes ambient-breathing { 0% { transform: scale(1.15, 0.9) translateY(8%); filter: blur(50px); } 50% { transform: scale(1.20, 0.95) translateY(9%); filter: blur(60px); } 100% { transform: scale(1.15, 0.9) translateY(8%); filter: blur(50px); } }
+#ambient-canvas { z-index: 1; transform: scale(1.15, 0.9) translateY(8%); filter: blur(50px); opacity: 0; transition: opacity 0.8s ease-in-out; animation: none; }
+#ambient-canvas.glow-active { opacity: 0.25; animation: ambient-breathing 12s ease-in-out infinite; }
+.nightMode #ambient-canvas.glow-active { opacity: 0.20; }
+#playPauseBottomBtn { position: absolute; bottom: 10px; left: 10px; z-index: 10; background: rgba(0, 0, 0, 0.6); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; padding: 0; margin: 0; cursor: pointer; transition: background 0.2s ease, transform 0.15s ease-out; user-select: none; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+.video-container #playPauseBottomBtn:hover { background: rgba(0, 0, 0, 0.75) !important; transform: scale(1.1); }
+#playPauseBottomBtn:active { transform: scale(0.95); transition: transform 0.05s ease-in, background 0.05s ease-in; background: rgba(0, 0, 0, 0.75) !important; }
+#playPauseBottomBtn svg.icon { display: none; width: 70%; height: 70%; fill: currentColor; stroke: currentColor; }
+#playPauseBottomBtn svg.icon-play { display: block; }
+#playPauseBottomBtn.is-playing svg.icon-pause { display: block; }
+#playPauseBottomBtn.is-playing svg.icon-play { display: none; }
+
+
+/* === ESTILOS Expression, Meaning, etc. (Sin cambios) === */
+.expression-container { text-align: center; width: 100%; margin-bottom: 0; }
+.meaning-container { text-align: center; width: 100%; margin-top: 0; margin-bottom: 10px; }
+.expression, .meaning { font-family: "Roboto", sans-serif; font-size: 23px; line-height: 1.5; font-weight: 400; color: rgb(255, 255, 255); padding: 10px 15px; border-radius: 10px; display: inline-block; word-wrap: break-word; word-break: break-word; text-align: center; max-width: 100%; box-sizing: border-box; }
+.expression { font-weight: 700; font-size: 26px; background-color: rgba(0, 0, 0, 0.85); }
+.meaning { background-color: rgba(0, 0, 0, 0.6); }
+.nightMode .expression { color: #f3f3f3; background-color: transparent; }
+.nightMode .meaning { color: #999999; background-color: transparent; }
+hr#answer { border: none; height: 2px; background-color: #303030; margin: 0 auto; width: 50%; }
+.nightMode hr#answer { background-color: #444; }
+
+
+/* ================================================================ */
+/* === Estilos para la Imagen y Notas (Responsive) === */
+/* ================================================================ */
+.notas-audio-container { display: flex; flex-direction: row; align-items: center; gap: 20px; width: 100%; max-width: 700px; margin: 15px auto; box-sizing: border-box; }
+.image-wrapper { flex: 0 0 160px; }
+.image-wrapper img { width: 160px; height: 160px; border-radius: 0; cursor: pointer; object-fit: cover; background-color: #333; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); }
+.nightMode .image-wrapper img { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35); }
+.notas-audio-container .Notas { flex: 1; text-align: left; margin: 0; padding: 0; }
+@media (max-width: 768px) {
+  .notas-audio-container { flex-direction: column; align-items: center; gap: 15px; }
+  .image-wrapper { flex-basis: auto; width: 60%; max-width: 240px; order: 2; }
+  .image-wrapper img { width: 100%; height: auto; aspect-ratio: 1 / 1; }
+  .notas-audio-container .Notas { width: 100%; text-align: center; order: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================== */
+/* === FUENTES PERSONALIZADAS (CORREGIDO) === */
+/* ======================================================== */
+/* Define las fuentes que hemos preparado */
+@font-face {
+  font-family: 'Notas Font';
+  font-style: normal;
+  font-weight: normal; /* Para texto normal */
+  src: url('_notas_normal.otf');
+}
+@font-face {
+  font-family: 'Notas Font';
+  font-style: italic;
+  font-weight: normal; /* Para texto en cursiva */
+  src: url('_notas_cursiva.ttf');
+}
+@font-face {
+  font-family: 'Notas Font';
+  font-style: normal;
+  font-weight: bold; /* Para texto en negrita */
+  src: url('_notas_negrita.otf');
+}
+@font-face {
+  font-family: 'Notas Font';
+  font-style: italic;
+  font-weight: bold; /* Para texto en negrita y cursiva */
+  src: url('_notas_negrita_cursiva.otf');
+}
+
+/* Aplica la familia de fuentes al campo de Notas */
+.Notas { 
+  font-family: 'Notas Font', 'Helvetica Neue', sans-serif;
+  font-weight: normal; 
+  font-size: 17px; 
+  line-height: 1.5; 
+  color: #4b4e4f; 
+  white-space: pre-wrap;
+}
+.nightMode .Notas { color: #777878; }
+
+/* Asegura que la negrita y cursiva funcionen correctamente */
+.Notas b, .Notas strong { font-weight: bold; color: inherit; }
+.Notas i, .Notas em { font-style: italic; color: inherit; }
+
+/* Estilos para listas y párrafos dentro de Notas */
+.Notas ul, .Notas ol { padding-left: 0; list-style-position: inside; margin-top: 0.8em; margin-bottom: 0.8em; }
+.Notas p { margin-top: 0.8em; margin-bottom: 0.8em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================================================== */
+/* === ESTILOS PARA CONTROLES (VERSIÓN DEFINITIVA Y CORRECTA) === */
+/* =================================================================== */
+
+/* --- Estilos para los iconos < > --- */
+.sub-btn-icon {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  outline: none !important; 
+  -webkit-tap-highlight-color: transparent; 
+  cursor: pointer;
+  
+  /* ===== BOTONES: Opacidad por defecto y transición suave ===== */
+  opacity: 0.5;
+  transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+/* === ICONOS: ESTILOS PARA MODO CLARO (BASE) === */
+.sub-btn-icon { color: #777777; }
+
+/* ===== BOTONES: Se vuelven 100% opacos al interactuar ===== */
+.sub-btn-icon:hover, .sub-btn-icon:active { 
+  color: #000000;
+  opacity: 1;
+}
+
+.sub-btn-icon:disabled { color: #cccccc; cursor: not-allowed; opacity: 0.3; }
+.sub-btn-icon:disabled:hover { color: #cccccc; opacity: 0.3; }
+
+/* === ICONOS: SOBREESCRIBIMOS ESTILOS PARA MODO OSCURO === */
+.nightMode .sub-btn-icon { color: #5e5e5e; }
+
+.nightMode .sub-btn-icon:hover, .nightMode .sub-btn-icon:active { 
+  color: #ffffff;
+  opacity: 1;
+}
+
+.nightMode .sub-btn-icon:disabled { color: #464646; opacity: 0.3; }
+.nightMode .sub-btn-icon:disabled:hover { color: #464646; opacity: 0.3; }
+
+
+/* --- Estilos para el contador de diálogos (ej: 1 / 5) --- */
+#sub-counter {
+  font-style: normal;
+  font-weight: 400;
+  color: #a5a5a5;
+  font-size: 26px;
+  line-height: 34px;
+  
+  /* ===== CONTADOR: Opacidad fija del 50% ===== */
+  opacity: 0.5;
+}
+.nightMode #sub-counter { color: #6c6c6c; }
+
+
+/* ========================================================== */
+/* === ESTILOS PARA EL MODO CONCENTRACIÓN (OCULTAR CONTROLES) === */
+/* ========================================================== */
+
+#subtitle-controls {
+  /* El contenedor ya no gestiona la opacidad, solo la transición para ocultarse */
+  transition: opacity 0.5s ease-in-out;
+}
+
+#subtitle-controls.controls-hidden {
+  opacity: 0;
+}
