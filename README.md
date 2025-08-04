@@ -40,16 +40,6 @@ Este método se centra en vocabulario verdaderamente nuevo y evita la repetició
 
 ---
 
-### Demostración Visual de las Tarjetas
-
-<p>En PC:</p>
-<img src="https://archive.org/download/grabacion-2025-08-03-115750/Grabaci%C3%B3n%202025-08-03%20115750.gif" alt="Demostración en PC" width="50%">
-
-<p>En AnkiDroid:</p>
-<img src="https://archive.org/download/untitled_20250803/untitled.gif" alt="Demostración de tarjeta en Android" width="25%">
-
----
-
 ### Fuentes Adicionales
 
 La clasificación también se apoya en:
