@@ -1,0 +1,117 @@
+<div id="myCard" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+
+  <!-- Contenedor Media -->
+   <div style="margin-bottom: 0px; display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px;">
+     <div style="width: 100%;">
+       <div style="text-align: center; line-height: 1; font-size: initial;">
+         {{#Imagen}}
+         <div class="video-wrapper">
+           <div class="video-container">
+              <canvas id="ambient-canvas"></canvas>
+              <video id="videoAnki" src="{{Imagen}}" width="100%" preload="none" playsinline></video>
+              <button id="playPauseBottomBtn" class="video-control-button-bottom" aria-label="Reproducir/Pausar">
+                 <svg class="icon icon-play" viewBox="0 0 24 24" width="70%" height="70%" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6 L19 12 L8 18 Z" /></svg>
+                 <svg class="icon icon-pause" viewBox="0 0 24 24" width="70%" height="70%" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="2" ry="2"></rect><rect x="14" y="5" width="4" height="14" rx="2" ry="2"></rect></svg>
+              </button>
+           </div>
+         </div>
+         {{/Imagen}}
+       </div>
+     </div>
+   </div>
+  <!-- FIN Contenedor Media -->
+
+  <!-- ===== BLOQUE {{Ingles}} DEFINITIVAMENTE CORREGIDO ===== -->
+  {{#Ingles}}
+  <div class="expression-container" style="margin-top: 5px; margin-bottom: 10px; width: 100%; max-width: 700px;">
+    <div class="expression">{{Ingles}}</div>
+  </div>
+  {{/Ingles}}
+  <!-- ===== FIN DEL BLOQUE CORREGIDO ===== -->
+
+  {{#Español}}
+  <hr id="answer">
+  <div class="meaning-container" style="margin-top: 10px; margin-bottom: 0px; width: 100%; max-width: 700px;">
+    <div class="meaning">{{Español}}</div>
+  </div>
+  {{/Español}}
+
+  <div class="notas-audio-container">
+    {{#Notas}}
+      <div class="Notas">{{Notas}}</div>
+    {{/Notas}}
+
+    <div class="image-wrapper">{{NotaImagen}}</div>
+  </div>
+  
+  <div id="anki-audio-container" style="display: none;">
+      {{AudioPalabra}}
+  </div>
+
+  <script>
+    function initializeAmbientMode(videoElement){const canvas=document.getElementById('ambient-canvas');if(!videoElement||!canvas)return;const ctx=canvas.getContext('2d');canvas.width=16;canvas.height=9;let animationFrameId;function drawGlow(){if(videoElement.paused||videoElement.ended){ctx.drawImage(videoElement,0,0,canvas.width,canvas.height);cancelAnimationFrame(animationFrameId);return}ctx.drawImage(videoElement,0,0,canvas.width,canvas.height);animationFrameId=requestAnimationFrame(drawGlow)}videoElement.addEventListener('play',()=>{canvas.classList.add('glow-active');cancelAnimationFrame(animationFrameId);drawGlow()})}
+    function togglePlayPauseVideo(event){var v=document.getElementById('videoAnki');if(!v)return;if(event){event.stopPropagation()}if(v.paused||v.ended){v.muted=false;if(v.readyState===0){v.load()}v.play().catch(e=>{})}else{v.pause()}}
+    function updateVideoUI(){var v=document.getElementById('videoAnki');var b=document.getElementById('playPauseBottomBtn');if(!v||!b)return;const p=v.paused||v.ended;b.classList.toggle('is-playing',!p);b.setAttribute('aria-label',p?'Reproducir':'Pausar')}
+    
+    function setupAudioPlayback() {
+      const expressionDiv = document.querySelector('.expression');
+      const ankiPlayButton = document.querySelector('#anki-audio-container .replay-button');
+      
+      // Salimos si el audio no existe para evitar errores
+      if (!expressionDiv || !ankiPlayButton) {
+        return;
+      }
+
+      function triggerAnkiAudio(event) {
+        if (event) event.stopPropagation(); // Detiene la propagación para no activar otros clicks
+        ankiPlayButton.click();
+      }
+
+      // Buscamos todas las palabras marcadas (b, strong, y las que creamos con .study-word)
+      const clickableWords = expressionDiv.querySelectorAll('b, strong, .study-word');
+      clickableWords.forEach(word => {
+        word.style.cursor = 'pointer';
+        word.addEventListener('click', triggerAnkiAudio);
+      });
+      
+      // Mantenemos la funcionalidad de click en la imagen de la nota
+      const imageTrigger = document.querySelector('.image-wrapper img');
+      if (imageTrigger) {
+        imageTrigger.addEventListener('click', triggerAnkiAudio);
+      }
+    }
+
+    function setupReverseCard() {
+        var videoElement = document.getElementById('videoAnki');
+        if (videoElement) {
+            var videoContainer = videoElement.closest('.video-container');
+            if (videoContainer) { videoContainer.addEventListener('click', togglePlayPauseVideo); }
+            initializeAmbientMode(videoElement);
+            const makeVideoVisible = () => { videoElement.classList.add('video-ready'); updateVideoUI(); };
+            if (videoElement.readyState >= 2) { makeVideoVisible(); } else { videoElement.addEventListener('loadeddata', makeVideoVisible, { once: true }); }
+            videoElement.addEventListener('play', updateVideoUI);
+            videoElement.addEventListener('pause', updateVideoUI);
+            videoElement.addEventListener('ended', updateVideoUI);
+            updateVideoUI();
+        }
+
+        // ======================= CAMBIO CLAVE AQUÍ =======================
+        // PASO 1: Convertimos el texto como ((palabra)) en <span class="study-word">palabra</span>
+        const expressionDiv = document.querySelector('.expression');
+        if(expressionDiv) {
+            expressionDiv.innerHTML = expressionDiv.innerHTML.replace(/\(\((.*?)\)\)/g, '<span class="study-word">$1</span>');
+        }
+
+        // PASO 2: AHORA que los elementos .study-word existen, llamamos a la función para añadirles el click.
+        setupAudioPlayback();
+        // =================================================================
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupReverseCard);
+    } else {
+        // Usamos setTimeout para asegurar que Anki haya procesado todo
+        setTimeout(setupReverseCard, 0); 
+    }
+  </script>
+</div>
