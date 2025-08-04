@@ -6,6 +6,24 @@ Su objetivo es optimizar tus archivos de subtítulos (`.srt`) **antes** de que l
 
 ---
 
+### Requisito Indispensable: Plantilla de Tarjeta
+
+Este add-on requiere un tipo de nota específico con una plantilla diseñada para mostrar las tarjetas de minado y de contexto correctamente.
+
+**Instrucciones de configuración:**
+
+1.  En Anki, ve a `Herramientas > Manejar tipos de nota > Añadir`. Selecciona `Añadir: Básico` y dale un nombre, por ejemplo, `Mine2Anki Template`.
+2.  Selecciona el nuevo tipo de nota y haz clic en `Tarjetas...`.
+3.  Copia y pega el contenido de los siguientes archivos en las pestañas correspondientes:
+
+    *   **Anverso:** Copia el código de [**front.html**](./anki_template/front.html)
+    *   **Reverso:** Copia el código de [**back.html**](./anki_template/back.html)
+    *   **Estilo:** Copia el código de [**styling.css**](./anki_template/styling.css)
+
+4.  Guarda los cambios. ¡Ya estás listo para usar el add-on!
+
+---
+
 ### Tipos de Tarjetas Generadas
 
 El proceso produce dos tipos de tarjetas optimizadas para diferentes objetivos de estudio:
