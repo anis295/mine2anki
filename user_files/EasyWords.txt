@@ -1,0 +1,1028 @@
+#separator:tab
+#html:false
+	kit
+	dress
+	trap
+	lot
+	foot
+	nurse
+	fleece
+	face
+	goat
+	goose
+	price
+	choice
+	mouth
+	near
+	square
+	start
+	north
+	comma
+	mom
+	pop
+	bob
+	faff
+	van
+	thrust
+	the
+	none
+	tack
+	better
+	dad
+	sass
+	zazz
+	light
+	church
+	judge
+	she
+	pleasure
+	red
+	yellow
+	thing
+	kick
+	goat
+	wow
+	hi
+have	
+food	
+buy	
+store	
+get	
+know	
+where	
+well	
+go	
+all	
+good	
+think	
+take	
+glass	
+pocket	
+about	
+tell	
+whole	
+life	
+today	
+want	
+everyone	
+leave	
+some	
+can	
+see	
+up	
+say	
+how	
+change	
+mind	
+late	
+now	
+dinner	
+make	
+let	
+who	
+carry	
+box	
+inside	
+key	
+winter	
+every	
+read	
+write	
+wrong	
+slow	
+already	
+hungry	
+more	
+speak	
+guy	
+should	
+often	
+call	
+lose	
+fine	
+clothes	
+drive	
+expensive	
+wear	
+ring	
+give	
+when	
+wait	
+way	
+last	
+year	
+remember	
+happen	
+try	
+save	
+cook	
+learn	
+maybe	
+anything	
+sure	
+sorry	
+great	
+avoid	
+rain	
+wet	
+jump	
+shirt	
+which	
+sing	
+loud	
+hear	
+many	
+swim	
+cold	
+complain	
+noise	
+wake up	
+back	
+run	
+yesterday	
+table	
+wallet	
+out	
+find	
+able	
+believe	
+date	
+each	
+meet	
+kind	
+season	
+spring	
+after	
+only	
+care	
+forget	
+move	
+door	
+room	
+fun	
+hard	
+shop	
+while	
+hurt	
+bucket	
+pour	
+fill	
+ever	
+keep	
+watch	
+turn	
+through	
+sleep	
+throw	
+win	
+most	
+hand	
+sell	
+set	
+front	
+clean	
+bit	
+eye	
+month	
+until	
+bury	
+nose	
+window	
+cover	
+lay	
+stare	
+floor	
+dream	
+hide	
+kid	
+pay	
+together	
+tomorrow	
+matter	
+stay	
+hit	
+steal	
+lie	
+fly	
+fall	
+horse	
+wall	
+across	
+desk	
+shake	
+evening	
+quick	
+corner	
+issue	
+sharp	
+knife	
+sick	
+sudden	
+ground	
+chest	
+climb	
+place	
+bill	
+wine	
+bring	
+actually	
+both	
+forward	
+street	
+few	
+seat	
+top	
+hang	
+trouble	
+bag	
+joke	
+stick	
+step	
+taste	
+afraid	
+weekend	
+chair	
+injure	
+wrist	
+grab	
+huge	
+fish	
+allow	
+burn	
+handle	
+instead	
+fit	
+request	
+boss	
+meat	
+tie	
+bread	
+field	
+wood	
+tear	
+weigh	
+deaf	
+ear	
+travel	
+safe	
+dish	
+makeup	
+boil	
+towards	
+stair	
+knee	
+recover	
+listen to	
+laugh	
+guess	
+pick	
+walk	
+another	
+share	
+deal	
+seem	
+nobody	
+side	
+drink	
+half	
+shut	
+hope	
+worry	
+tail	
+pull	
+plane	
+tired	
+almost	
+raise	
+uncle	
+ride	
+fight	
+least	
+shower	
+wish	
+gift	
+town	
+soon	
+fix	
+coat	
+rest	
+alone	
+toilet	
+realize	
+mistake	
+fast	
+rock	
+answer	
+tough	
+country	
+grow	
+wonderful	
+dance	
+glad	
+tooth	
+weird	
+follow	
+lock	
+record	
+somewhere	
+apologize	
+single	
+neck	
+heart	
+farm	
+land	
+join	
+luck	
+pool	
+hurry	
+speed	
+mirror	
+toast	
+excited	
+worth	
+heavy	
+wash	
+fan	
+switch	
+age	
+hole	
+fair	
+angry	
+shout	
+sock	
+deep	
+whenever	
+dark	
+shame	
+wave	
+resource	
+oil	
+thin	
+agree	
+tub	
+strike	
+silly	
+bean	
+bunch	
+cheat	
+freeze	
+above	
+warm	
+purse	
+breath	
+glove	
+shoulder	
+wide	
+receipt	
+cheap	
+chase	
+customer	
+envelope	
+wipe	
+sink	
+sweep	
+introduce	
+twist	
+garden	
+successful	
+fork	
+earth	
+scratch	
+manage	
+bug	
+beer	
+slice	
+rude	
+let go	
+spill	
+wing	
+storm	
+roof	
+punch	
+threaten	
+snow	
+yard	
+bright	
+accomplish	
+bend	
+fog	
+pan	
+gain	
+seek	
+jar	
+advise	
+plug in	
+mouse	
+edge	
+cheek	
+spoon	
+stir	
+faint	
+overnight	
+rocket	
+highway	
+dust	
+wound	
+print	
+bake	
+shelf	
+hill	
+teenager	
+plain	
+topic	
+flood	
+break	
+same	
+stuff	
+knock	
+happy	
+ready	
+end	
+couple	
+buddy	
+smell	
+whatever	
+send	
+mine	
+catch	
+card	
+drop	
+fact	
+relationship	
+quite	
+lady	
+sign	
+wonder	
+buck	
+tape	
+naked	
+bet	
+blow	
+buzz	
+hat	
+either	
+enjoy	
+suit	
+bald	
+wedding	
+cool	
+scream	
+spend	
+bother	
+short	
+throat	
+dry	
+sort	
+couch	
+beat	
+tongue	
+meal	
+horn	
+strange	
+nut	
+yell	
+parking	
+gentleman	
+early	
+pound	
+comfortable	
+fault	
+though	
+fat	
+upset	
+bubble	
+owe	
+finger	
+law	
+toe	
+sweet	
+road	
+bite	
+expect	
+cop	
+poor	
+crowd	
+young	
+type	
+blood	
+neighbor	
+truth	
+screw	
+cousin	
+cash	
+lip	
+pack	
+low	
+borrow	
+engine	
+bone	
+lift	
+freak	
+garbage	
+trust	
+hall	
+mood	
+build	
+smoke	
+beg	
+size	
+appointment	
+wild	
+truck	
+straight	
+perhaps	
+tip	
+bump	
+get rid of	
+whose	
+quit	
+dial	
+skin	
+waste	
+interview	
+unless	
+certain	
+insane	
+count	
+rather	
+begin	
+underwear	
+besides	
+crack	
+belong	
+swear	
+lane	
+magazine	
+crash	
+doll	
+terrific	
+rip	
+neither	
+fool	
+spit	
+hook	
+round	
+sauce	
+jerk	
+power	
+quiet	
+match	
+library	
+shave	
+push	
+disgusting	
+slip	
+ask out	
+spare	
+bottom	
+plenty	
+hot	
+cough	
+back up	
+bark	
+address	
+onto	
+hire	
+dump	
+laundry	
+twice	
+beat up	
+sweat	
+dear	
+wheel	
+arrest	
+blind	
+drawer	
+engage	
+blow up	
+congratulations	
+ugly	
+label	
+swing	
+wind	
+break up	
+aware	
+murder	
+insurance	
+reach	
+dirty	
+dip	
+pain	
+bring up	
+cotton	
+mess	
+deliver	
+whistle	
+close to	
+treat	
+calm down	
+flip	
+deserve	
+blame	
+sneak	
+contest	
+clock	
+suck	
+catch up	
+trade	
+tiny	
+alive	
+rush	
+doubt	
+lead	
+butter	
+row	
+fellow	
+feed	
+chicken out	
+screen	
+refuse	
+disturb	
+kinda	
+bless	
+load	
+come over	
+score	
+daily	
+sigh	
+afford	
+shape	
+stain	
+ribbon	
+count on	
+remind	
+bench	
+split	
+eventually	
+gorgeous	
+counter	
+weak	
+cover up	
+bell	
+motion	
+awful	
+fancy	
+proud	
+owner	
+deal with	
+hip	
+trick	
+odd	
+rub	
+oven	
+junk	
+end up	
+squeeze	
+carpet	
+outfit	
+account	
+witness	
+cap	
+smooth	
+figure out	
+helmet	
+belt	
+starve	
+perform	
+concern	
+suggest	
+lean	
+find out	
+pencil	
+dot	
+thick	
+fabric	
+awkward	
+being	
+empty	
+degree	
+duty	
+flip out	
+furniture	
+cow	
+rubber	
+fear	
+prove	
+slide	
+get along with	
+dumb	
+bath	
+subject	
+advantage	
+according to	
+jealous	
+subway	
+tight	
+get around to	
+tune	
+recognize	
+barely	
+cartoon	
+schedule	
+soap	
+available	
+get in	
+proof	
+bridge	
+brand	
+bitter	
+disease	
+file	
+charity	
+holy	
+holiday	
+apology	
+snap	
+boat	
+steam	
+smash	
+sake	
+weather	
+get something over with	
+scare	
+pregnant	
+blanket	
+dare	
+flush	
+delay	
+strong	
+get up	
+scam	
+otherwise	
+dessert	
+clever	
+loan	
+give up	
+vacuum	
+remain	
+regret	
+handsome	
+fund	
+nail	
+go ahead	
+wrap	
+hop	
+moon	
+chop	
+view	
+rough	
+main	
+cart	
+gross out	
+stretch	
+brush	
+thief	
+rope	
+stone	
+add	
+commitment	
+seed	
+grow up	
+wire	
+get there	
+fail	
+encourage	
+spell	
+bounce	
+hand in	
+trial	
+make fun of	
+haul	
+sour	
+shock	
+cage	
+pipe	
+lend	
+gut	
+recipe	
+hang on to	
+spread	
+balloon	
+give birth	
+drag	
+slight	
+struggle	
+rare	
+poison	
+hang out	
+replace	
+loose	
+ill	
+spicy	
+dig	
+nap	
+jam	
+refund	
+chart	
+hang up	
+regard	
+root	
+chain	
+butt	
+beyond	
+pillow	
+hold on	
+drain	
+flat	
+item	
+exit	
+indeed	
+pole	
+feature	
+thumb	
+keep on	
+recall	
+wander	
+bull	
+leather	
+swallow	
+dough	
+research	
+kick out	
+flavor	
+silver	
+exchange	
+breakdown	
+soul	
+alley	
+revenge	
+attach	
+forgive	
+let down	
+pot	
+argue	
+mayor	
+slap	
+stall	
+village	
+wise	
+look after	
+chuck	
+gate	
+height	
+ban	
+string	
+compliment	
+hunt	
+embarrass	
+flag	
+look forward to	
+legal	
+below	
+pride	
+willing	
+fold	
+rack	
+healthy	
+shift	
+look up	
+streak	
+upside	
+behavior	
+develop	
+strap	
+gap	
+several	
+make up	
+suspect	
+profit	
+neat	
+lazy	
+journey	
+balance	
+skill	
+mess up	
+hug	
+umbrella	
+bold	
+grateful	
+thunder	
+jail	
+ankle	
+mix up	
+charm	
+tale	
+thrill	
+throughout	
+lap	
+skip	
+forever	
+nest	
+move out	
+fee	
+filthy	
+refer	
+spin	
+joy	
+partner	
+sample	
+pick on	
+crop	
+stroke	
+pat	
+puzzle	
+tire	
+stab	
+grind	
+put away	
+ourselves	
+disposal	
+puppet	
+strip	
+guilt	
+lung	
+remark	
+put on	
+goal	
+basement	
+heel	
+tax	
+put up with	
+meanwhile	
+groceries	
+reject	
+chess	
+wardrobe	
+workout	
+storage	
+forest	
+rip off	
+pump	
+skull	
+senior	
+broad	
+run into	
+pleasant	
+polite	
+run out of	
+approach	
+backwards	
+chin	
+fare	
+run over	
+heaven	
+however	
+danger	
+screw up	
+arrange	
+warehouse	
+loop	
+set up	
+assure	
+fist	
+mud	
+twin	
+draw	
+survive	
+urge	
+alike	
+pursue	
+show off	
+nightmare	
+offensive	
+amount	
+earn	
+shut up	
+hesitate	
+pray	
+sleep in	
+rage	
+savage	
+improve	
+speak up	
+steady	
+purchase	
+stay up	
+bizarre	
+toss	
+budget	
+crew	
+ditch	
+throw up	
+tool	
+fence	
+delight	
+try on	
+brick	
+dismiss	
+display	
+relieve	
+turn into	
+likely	
+glow	
+blend	
+watch out	
+blade	
+bride	
+wear out	
+sting	
+warn	
+bush	
+glimpse	
+gather	
+surround	
+cease	
+shadow	
+grip	
+sketch	
+punish	

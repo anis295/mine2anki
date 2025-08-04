@@ -1,0 +1,13 @@
+{
+  "package": "mine2anki_optimizar_subs_co1000",
+  "name": "Mine2Anki - Optimizar Subtítulos",
+  "author": "co1000",
+  "version": "1.4",
+  "conflicts": [],
+  "homepage": "https://github.com/co1000",
+  "files": [
+    "__init__.py",
+    "vendor",
+    "user_files"
+  ]
+}
